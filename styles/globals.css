@@ -70,3 +70,20 @@ footer span,
 footer a {
   margin-right: 10px;
 }
+
+.notFound{
+  height: 80vh;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.notFound h2{
+  font-weight: unset;
+  font-size: 18px;
+}
+.notFound h2 a{
+  text-decoration: underline;
+  color: #A1ECF7;
+}

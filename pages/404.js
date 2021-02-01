@@ -6,7 +6,7 @@ import Link from 'next/link';
   return(
       <div className="notFound">
         <h2>
-            Pagina não encontrada navegue para 
+            Pagina não encontrada, por favor volte para 
             <Link href="/">
                 <a> Home</a>
             </Link>
