@@ -1,65 +1,64 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import CustomHead from '../components/Head';
+import BlogCard from '../components/BlogCard';
+import Link from 'next/link';
 
-export default function Home() {
+ const Home = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className="main">
+      
+      <CustomHead 
+        pageTitle = "Eugenio Rosario - Web and Mobile developer"
+      />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div className="content">
+        <article className="introduction">
+          <h1>Ola</h1>
+          <p>
+            Meu nome é Eugénio, apaixonado por desenvolvimento de software,  
+            energia renovável, e tudo relacionado a tecnologia.
+            Acredito que posso melhorar o mundo desenvolvendo coisas.
+          </p>
+          <p> 
+            Tenho um  
+            <a 
+              href="https://www.youtube.com/channel/UCA4uTaYYxjrvXNvs-SO8HSg" 
+              rel="noopener" 
+              target="_blank"
+              className="linkToYT"
+            >
+               canal no youtube com conteúdos sobre programação.
+            </a>
+          </p>
+        </article>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <section className='recentPosts'>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <h3>Ultimas do blog</h3>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <BlogCard 
+            PostTitle="Design pattern com flutter"
+            PostDate="Domingo, 07 de Junho 2020"
+            PostDecription={`Será como "olhar sob o capô" do BloC e do Redux. Nesse caso, abordaremos as ervas daninhas da estrutura MVC conforme a implementei. Como seria, vai ficar um pouco complicado.`}
+            PostTags={`#flutter, #mobile, #crossplatform`}
+          />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <BlogCard 
+            PostTitle="Design pattern com flutter"
+            PostDate="Domingo, 07 de Junho 2020"
+            PostDecription={`Será como "olhar sob o capô" do BloC e do Redux. Nesse caso, abordaremos as ervas daninhas da estrutura MVC conforme a implementei. Como seria, vai ficar um pouco complicado.`}
+            PostTags={`#flutter, #mobile, #crossplatform`}
+          />
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+          <Link href="/blog">
+            <a className='seeMorePostsLink'>
+              Ver todos os posts
+            </a>
+          </Link>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        </section>
+      </div>
     </div>
   )
 }
+
+export default Home;
