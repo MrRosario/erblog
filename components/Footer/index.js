@@ -36,6 +36,7 @@ function GithubIcon(){
         </Link>
     )
 }
+
 function LinkedinIcon(){
     return(
         <Link href="https://www.linkedin.com/in/eug%C3%AAnio-ros%C3%A1rio-mbi-498544128/">
@@ -47,6 +48,7 @@ function LinkedinIcon(){
         </Link>
     )
 }
+
 function YoutubeIcon(){
     return(
         <Link href="https://www.youtube.com/channel/UCA4uTaYYxjrvXNvs-SO8HSg">
