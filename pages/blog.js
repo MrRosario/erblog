@@ -1,4 +1,4 @@
-import CustomHead from '../components/Head';
+// import CustomHead from '../components/Head';
 import BlogCard from '../components/BlogCard';
 
 export default function AllPosts() {
@@ -7,9 +7,9 @@ export default function AllPosts() {
 
   return (
     <div className="main">
-      <CustomHead 
+      {/* <CustomHead 
         pageTitle = "Posts || Eugenio Rosario"
-      />
+      /> */}
 
       <div className="content">
         { arr.map((item, index) => (

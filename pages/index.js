@@ -1,4 +1,4 @@
-import CustomHead from '../components/Head';
+// import CustomHead from '../components/Head';
 import BlogCard from '../components/BlogCard';
 import Link from 'next/link';
 
@@ -6,9 +6,9 @@ import Link from 'next/link';
   return (
     <div className="main">
       
-      <CustomHead 
+      {/* <CustomHead 
         pageTitle = "Eugenio Rosario - Web and Mobile developer"
-      />
+      /> */}
 
       <div className="content">
         <article className="introduction">

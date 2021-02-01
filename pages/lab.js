@@ -1,11 +1,11 @@
-import CustomHead from '../components/Head';
+// import CustomHead from '../components/Head';
 
 const Lab = () => {
   return (
     <div className="main">
-      <CustomHead 
+      {/* <CustomHead 
         pageTitle = "Portfólio || Eugenio Rosario"
-      />
+      /> */}
       
       <div className="content">
         <h1>Página Portfólio </h1>
