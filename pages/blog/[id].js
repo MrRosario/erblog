@@ -2,7 +2,7 @@ import React from 'react'
 import getConfig from 'next/config';
 
  const Blog = ({ blogPost }) => {
-     
+
     const { API_URL } = process.env;
 
     const { 
@@ -41,7 +41,16 @@ export async function getServerSideProps (context) {
 
     const res = await fetch(`${API_URL}/blogs/${id}`)
     const data = await res.json()
-  
+    
+    if (!data) {
+        return {
+          redirect: {
+            destination: '/',
+            permanent: false,
+          },
+        }
+    }
+
     return {
       props: {
         blogPost: data
