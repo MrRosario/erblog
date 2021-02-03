@@ -6,7 +6,6 @@ import Link from 'next/link';
     PostTitle,
     PostDate,
     PostDecription,
-    PostTags,
     PostId
  }) => {
 
