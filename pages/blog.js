@@ -1,9 +1,9 @@
 // import CustomHead from '../components/Head';
 import BlogCard from '../components/BlogCard';
 
-export default function AllPosts() {
-
-  const arr = [1,2,3];
+const AllPosts = ({Blogs}) => {
+  
+  console.log(Blogs);
 
   return (
     <div className="main">
@@ -12,13 +12,14 @@ export default function AllPosts() {
       /> */}
 
       <div className="content">
-        { arr.map((item, index) => (
+        { Blogs.map((item, index) => (
           <BlogCard 
-            PostTitle="Design pattern com flutter"
-            PostDate="Domingo, 07 de Junho 2020"
-            PostDecription={`Será como "olhar sob o capô" do BloC e do Redux. Nesse caso, abordaremos as ervas daninhas da estrutura MVC conforme a implementei. Como seria, vai ficar um pouco complicado.`}
-            PostTags={`#flutter, #mobile, #crossplatform`}
-            key={index}
+            PostTitle={item.title}
+            PostDate={item.published_at}
+            PostDecription={item.description}
+            PostTags={item.categories}
+            key={item.id}
+            PostId={item.id}
           />
           )) 
         }
@@ -26,3 +27,18 @@ export default function AllPosts() {
     </div>
   )
 }
+
+export async function getServerSideProps () {
+  const { API_URL } = process.env;
+
+  const res = await fetch(`${API_URL}/blogs`)
+  const data = await res.json()
+
+  return {
+    props: {
+      Blogs: data
+    },
+  }
+}
+
+export default AllPosts

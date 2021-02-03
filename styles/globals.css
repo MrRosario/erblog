@@ -17,15 +17,12 @@ a {
 }
 h1, h2{
   color: #ffffff;
-  font-family: Roboto;
-  font-weight: bold;
   font-size: 28px;
   line-height: 33px;
   letter-spacing: 0.05em;
   margin: 0;
 }
 h3{
-  font-family: Roboto;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -86,4 +83,41 @@ footer a {
 .notFound h2 a{
   text-decoration: underline;
   color: #A1ECF7;
+}
+
+/******Blog Post*******/
+.post{
+  padding: 10px;
+  color: #ffffff;
+}
+.post .featured_image{
+ width: 100%;
+ height: auto;
+}
+
+.post p {
+  color: #ffffff;
+}
+.post h1,
+.post h2 {
+  color: #ffffff;
+}
+.post pre {
+  display: block;
+  padding: 10px;
+  margin: 0 0 28px;
+  font-size: 13px;
+  line-height: 1.6;
+  
+  background-color: #f8f9fb;
+  border: none;
+  border-radius: 4px;
+  -webkit-font-smoothing: initial;
+}
+.post pre code{
+  white-space: pre-wrap;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #383a42;
 }
