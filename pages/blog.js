@@ -17,7 +17,6 @@ const AllPosts = ({Blogs}) => {
             PostTitle={item.title}
             PostDate={item.published_at}
             PostDecription={item.description}
-            // PostTags={item.categories}
             key={item.id}
             PostId={item.id}
           />

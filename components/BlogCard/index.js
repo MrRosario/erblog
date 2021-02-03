@@ -29,7 +29,7 @@ import Link from 'next/link';
         </Link>
         
         <div className="tags">
-            {/* { PostTags.map((item, index) => <span key={index}> #{item.categorieName} </span> )} */}
+        
         </div>
     </div>
   )
