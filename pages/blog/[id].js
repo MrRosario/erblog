@@ -1,5 +1,36 @@
-import React from 'react'
 import getConfig from 'next/config';
+
+const { publicRunTimeConfig } = getConfig();
+const { API_URL } = process.env;
+
+export const getStaticPaths = async () => {
+ 
+  const res = await fetch(`${API_URL}/blogs`)
+  const data = await res.json();
+
+  const paths = data.map(ninja => {
+    return{
+      params: { id: ninja.id.toString() }
+    }
+  })
+
+  return{
+    paths,
+    fallback: false
+  }
+}
+
+export const getStaticProps = async (context) => {
+
+  const id = context.params.id;
+
+  const res = await fetch(`${API_URL}/blogs/${id}`);
+  const data = await res.json();
+  
+  return {
+    props: { blogPost: data }
+  }
+}
 
  const Blog = ({ blogPost }) => {
 
@@ -32,29 +63,4 @@ import getConfig from 'next/config';
 
 }
 
-const { publicRunTimeConfig } = getConfig();
-
-export async function getServerSideProps (context) {
-
-    const { id } = context.query;
-    const { API_URL } = process.env;
-
-    const res = await fetch(`${API_URL}/blogs/${id}`)
-    const data = await res.json()
-    
-    if (!data) {
-        return {
-          redirect: {
-            destination: '/',
-            permanent: false,
-          },
-        }
-    }
-
-    return {
-      props: {
-        blogPost: data
-      }
-    }
-}
-export default Blog
+export default Blog;
