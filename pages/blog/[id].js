@@ -16,7 +16,7 @@ import getConfig from 'next/config';
     <div className="content post">
         <h1 dangerouslySetInnerHTML={{__html: title}} />
         
-        <time>{updatedAt}</time>
+        {/* <time>{updatedAt}</time> */}
 
         {/* <img
             className="featured_image" 
