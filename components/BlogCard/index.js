@@ -11,7 +11,7 @@ import Link from 'next/link';
 
     
   return (
-    <div className={`card ${styles.blogCard}`}>
+    <div className={`card ${styles.blogCard}`} key={PostId}>
         <h1 className="title">
             { PostTitle }
         </h1>
@@ -19,7 +19,7 @@ import Link from 'next/link';
             { PostDate }
         </time>
 
-        <Link href='/blog/[id]' as={`blog/${PostId}`}>
+        <Link href={'/blog/' + PostId} as={`/blog/${PostId}`}>
             <a>
                 <h2 className="description">
                     { PostDecription }

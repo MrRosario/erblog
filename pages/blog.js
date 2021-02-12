@@ -3,8 +3,6 @@ import BlogCard from '../components/BlogCard';
 
 const AllPosts = ({Blogs}) => {
   
-  console.log(Blogs);
-
   return (
     <div className="main">
       {/* <CustomHead 
@@ -18,6 +16,7 @@ const AllPosts = ({Blogs}) => {
             PostDate={item.published_at}
             PostDecription={item.description}
             key={item.id}
+            slug={item.slug}
             PostId={item.id}
           />
           )) 

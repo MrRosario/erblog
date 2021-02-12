@@ -6,10 +6,10 @@ import getConfig from 'next/config';
     const { API_URL } = process.env;
 
     const { 
-        title, 
-        content, 
-        featured_image, 
-        updatedAt 
+      title, 
+      content, 
+      featured_image, 
+      updatedAt 
     } = blogPost;
     
   return (
@@ -18,11 +18,11 @@ import getConfig from 'next/config';
         
         <time>{updatedAt}</time>
 
-        <img
+        {/* <img
             className="featured_image" 
-            src={`${API_URL}${featured_image.url}`} 
-            alt={`${API_URL}${featured_image.name}`}
-        />
+            src={`${API_URL}/${featured_image.url}`} 
+            alt='image'
+        /> */}
         <div 
             className="blogpost--content"
             dangerouslySetInnerHTML={{__html: content}}
