@@ -1,17 +1,9 @@
-import React from 'react';
+const useFetchApi = async (url) => {
+  const { API_URL } = process.env;
 
-const getServerSideProps = async () => {
-    const { API_URL } = process.env;
-
-    const res = await fetch(`${API_URL}/`)
-    const data = await res.json()
-
-    return {
-      props: {
-        Blogs: data,
-        Categories: data
-      },
-    }
-  }
+  const res = await fetch(`${API_URL}/${url}`);
   
-  export default getServerSideProps;
+  return await res.json();
+}
+  
+export default useFetchApi;
