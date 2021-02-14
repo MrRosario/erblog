@@ -9,4 +9,10 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
+export function reportWebVitals(metric) {
+  if (metric.label === 'custom') {
+    console.log(metric);
+  }
+}
+
 export default MyApp

@@ -1,15 +1,9 @@
-// import CustomHead from '../components/Head';
 import BlogCard from '../components/BlogCard';
 import Link from 'next/link';
 
  const Home = () => {
   return (
     <div className="main">
-      
-      {/* <CustomHead 
-        pageTitle = "Eugenio Rosario - Web and Mobile developer"
-      /> */}
-
       <div className="content">
         <article className="introduction">
           <h1>Ola</h1>
@@ -24,15 +18,13 @@ import Link from 'next/link';
               href="https://www.youtube.com/channel/UCA4uTaYYxjrvXNvs-SO8HSg" 
               rel="noopener" 
               target="_blank"
-              className="linkToYT"
+              className="btn btn-view-more"
             >
                canal no youtube com conteúdos sobre programação.
             </a>
           </p>
         </article>
-
-        <section className='recentPosts'>
-
+        <section className='recent-posts'>
           <h3>Ultimas do blog</h3>
 
           <BlogCard 
@@ -42,15 +34,8 @@ import Link from 'next/link';
             PostTags={`#flutter, #mobile, #crossplatform`}
           />
 
-          <BlogCard 
-            PostTitle="Design pattern com flutter"
-            PostDate="Domingo, 07 de Junho 2020"
-            PostDecription={`Será como "olhar sob o capô" do BloC e do Redux. Nesse caso, abordaremos as ervas daninhas da estrutura MVC conforme a implementei. Como seria, vai ficar um pouco complicado.`}
-            PostTags={`#flutter, #mobile, #crossplatform`}
-          />
-
           <Link href="/blog">
-            <a className='seeMorePostsLink'>
+            <a className="btn btn-view-more">
               Ver todos os posts
             </a>
           </Link>

@@ -1,16 +1,37 @@
-import getConfig from 'next/config';
+import useFetchApi from '../../hooks/useFetchApi';
+import useFormatDate from '../../hooks/useFormatDate';
 
-const { publicRunTimeConfig } = getConfig();
-const { API_URL } = process.env;
+ const Blog = ({ blogPost }) => {
+
+  const { title, content, published_at } = blogPost;
+  const { formatedDate } = useFormatDate(published_at);
+  
+  return (
+    <div className="content post">
+      <h1
+        className="post__title" 
+        dangerouslySetInnerHTML={{__html: title}} 
+      />
+
+      <time className="post__time">
+        { formatedDate }
+      </time>
+
+      <div 
+        className="post__content"
+        dangerouslySetInnerHTML={{__html: content}}
+      />
+    </div>
+  )
+}
 
 export const getStaticPaths = async () => {
  
-  const res = await fetch(`${API_URL}/blogs`)
-  const data = await res.json();
+  const data = await useFetchApi('blogs');
 
-  const paths = data.map(ninja => {
+  const paths = data.map(posts => {
     return{
-      params: { id: ninja.id.toString() }
+      params: { id: posts.id.toString() }
     }
   })
 
@@ -22,44 +43,11 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
 
-  const id = context.params.id;
-
-  const res = await fetch(`${API_URL}/blogs/${id}`);
-  const data = await res.json();
+  const data = await useFetchApi(`blogs/${context.params.id}`);
   
   return {
     props: { blogPost: data }
   }
-}
-
- const Blog = ({ blogPost }) => {
-
-    const { API_URL } = process.env;
-
-    const { 
-      title, 
-      content, 
-      featured_image, 
-      updatedAt 
-    } = blogPost;
-    
-  return (
-    <div className="content post">
-        <h1 dangerouslySetInnerHTML={{__html: title}} />
-        
-        {/* <time>{updatedAt}</time> */}
-
-        {/* <img
-            className="featured_image" 
-            src={`${API_URL}/${featured_image.url}`} 
-            alt='image'
-        /> */}
-        <div 
-            className="blogpost--content"
-            dangerouslySetInnerHTML={{__html: content}}
-        />
-    </div>
-  )
 
 }
 
