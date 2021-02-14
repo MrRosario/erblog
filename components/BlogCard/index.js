@@ -1,5 +1,3 @@
-import React from 'react'
-import styles from '../../styles/BlogCard.module.css'
 import Link from 'next/link';
 
  const BlogCard = ({
@@ -10,28 +8,25 @@ import Link from 'next/link';
  }) => {
 
     
-  return (
-    <div className={`card ${styles.blogCard}`} key={PostId}>
-        <h1 className="title">
-            { PostTitle }
-        </h1>
-        <time className="title">
-            { PostDate }
-        </time>
 
-        <Link href={'/blog/' + PostId} as={`/blog/${PostId}`}>
-            <a>
-                <h2 className="description">
-                    { PostDecription }
+    return (
+        <Link href={'/blog/' + PostId} as={'/blog/' + PostId}>
+            <a className='card' key={PostId}>
+                <h2 className="card__title">
+                    { PostTitle }
                 </h2>
+
+                <time className="card__time">
+                    { PostDate }
+                </time>
+
+                <h3 className="card__description">
+                    { PostDecription }
+                </h3>
+                <div className="card__tags"> </div>
             </a>
         </Link>
-        
-        <div className="tags">
-        
-        </div>
-    </div>
-  )
+    )
 
 }
 
