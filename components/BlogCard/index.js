@@ -5,13 +5,14 @@ import useFormatDate from '../../hooks/useFormatDate';
     PostTitle,
     PostDate,
     PostDecription,
-    PostId
+    PostId,
+    PostSlug
  }) => {
 
     const { formatedDate } = useFormatDate(PostDate);
     
     return (
-        <Link href={'/blog/' + PostId} as={'/blog/' + PostId}>
+        <Link href={'/blog/' + PostSlug} as={'/blog/' + PostSlug}>
             <a className='card' key={PostId}>
                 <h2 className="card__title">
                     { PostTitle }

@@ -27,10 +27,10 @@ import useFormatDate from '../../hooks/useFormatDate';
 
 export const getServerSideProps = async (context) => {
 
-  const data = await useFetchApi(`blogs/${context.query.id}`);
+  const data = await useFetchApi(`blogs?slug=${context.query.slug}`);
   
   return {
-    props: { blogPost: data }
+    props: { blogPost: data[0] }
   }
 
 }

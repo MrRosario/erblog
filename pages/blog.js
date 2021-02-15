@@ -13,7 +13,7 @@ const AllPosts = ({Blogs}) => {
               PostDate={item.published_at}
               PostDecription={item.description}
               key={item.id}
-              slug={item.slug}
+              PostSlug={item.slug}
               PostId={item.id}
             />
         )) 
