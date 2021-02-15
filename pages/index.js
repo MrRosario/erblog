@@ -1,7 +1,9 @@
 import BlogCard from '../components/BlogCard';
+import useFetchApi from '../hooks/useFetchApi';
+import useFormatDate from '../hooks/useFormatDate';
 import Link from 'next/link';
 
- const Home = () => {
+ const Home = ({ Blogs }) => {
   return (
     <div className="main">
       <div className="content">
@@ -27,13 +29,17 @@ import Link from 'next/link';
         <section className='recent-posts'>
           <h3>Ultimas do blog</h3>
 
-          <BlogCard 
-            PostTitle="Design pattern com flutter"
-            PostDate="Domingo, 07 de Junho 2020"
-            PostDecription={`Será como "olhar sob o capô" do BloC e do Redux. Nesse caso, abordaremos as ervas daninhas da estrutura MVC conforme a implementei. Como seria, vai ficar um pouco complicado.`}
-            PostTags={`#flutter, #mobile, #crossplatform`}
-          />
-
+          { Blogs.map( item => (
+              <BlogCard 
+                PostTitle={item.title}
+                PostDate={item.published_at}
+                PostDecription={item.description}
+                key={item.id}
+                slug={item.slug}
+                PostId={item.id}
+              />
+            )
+          )}
           <Link href="/blog">
             <a className="btn btn-view-more">
               Ver todos os posts
@@ -44,6 +50,18 @@ import Link from 'next/link';
       </div>
     </div>
   )
+}
+
+export async function getStaticProps () {
+  
+  const data = await useFetchApi('blogs')
+
+  return {
+    props: {
+      Blogs: data
+    },
+    revalidate: 1
+  }
 }
 
 export default Home;

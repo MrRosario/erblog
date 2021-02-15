@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import useFormatDate from '../../hooks/useFormatDate';
 
  const BlogCard = ({
     PostTitle,
@@ -7,8 +8,8 @@ import Link from 'next/link';
     PostId
  }) => {
 
+    const { formatedDate } = useFormatDate(PostDate);
     
-
     return (
         <Link href={'/blog/' + PostId} as={'/blog/' + PostId}>
             <a className='card' key={PostId}>
@@ -17,7 +18,7 @@ import Link from 'next/link';
                 </h2>
 
                 <time className="card__time">
-                    { PostDate }
+                    { formatedDate }
                 </time>
 
                 <h3 className="card__description">
