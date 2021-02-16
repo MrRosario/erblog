@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-html,
+:root{
+  --primary-color: #0077b6;
+  --secondary-color: #000f00;
+  --link-color: #f0f0f0ff;
+}
 body {
   padding: 0;
   margin: 0;
@@ -18,14 +22,14 @@ a {
 h1, h2, h3{
   font-style: normal;
   font-weight: 300;
-  color: #1D1D1D;
+  color: #000000;
   line-height: 33px;
   letter-spacing: 0.05em;
   margin: 0;
 }
 
 p{
-  color: #1D1D1D;
+  color: #000000;
   font-size: 15px;
   line-height: 25px;
 }
@@ -47,13 +51,50 @@ p{
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
-  color: #A1ECF7;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 .recent-posts{
   padding-bottom: 20px;
 }
+/****HEADER****/
 
+.header{
+  height: 60px;
+  width: 100%;
+  background: #171717;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+.logo{
+  height: 60px;
+}
+.links{
+  margin-left: 20px;
+}
+.links__item {
+  margin-right: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+.link__item--active{
+  color: var(--primary-color) !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+.header__logo {
+  height: 60px
+}
+.header__logo img{
+  height: 100%;
+} 
 /***FOOTER****/
 footer{
   text-align: center;
@@ -77,13 +118,13 @@ footer a {
 }
 .notFound h2 a{
   text-decoration: underline;
-  color: #A1ECF7;
+  color: var(--primary-color);
 }
 
 /******Blog Post*******/
 .post{
   padding: 10px;
-  color: #1D1D1D;
+  color: #000000;
 }
 .post__content img{
  width: 100%;
@@ -120,10 +161,11 @@ footer a {
   padding: 10px;
   margin-bottom: 20px;
   cursor: pointer;
-  box-shadow: 0px 1px 8px 1px #000000;
+  border: 0.5px solid rgb(0 0 0 / 15%);
+  box-shadow: 0px 7px 7px -3px rgb(0 0 0 / 50%);
 }
-.card:active{ 
-  border: 1px solid #17ceeb;
+.card:hover{ 
+  border: 1px solid var(--primary-color);
 }
 .card__title{
   font-weight: bold;

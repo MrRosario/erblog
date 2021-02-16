@@ -1,6 +1,5 @@
 import BlogCard from '../components/BlogCard';
 import useFetchApi from '../hooks/useFetchApi';
-import useFormatDate from '../hooks/useFormatDate';
 
 const AllPosts = ({Blogs}) => {
   
