@@ -165,7 +165,7 @@ footer a {
   box-shadow: 0px 7px 7px -3px rgb(0 0 0 / 50%);
 }
 .card:hover{ 
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 .card__title{
   font-weight: bold;
