@@ -2,6 +2,9 @@
 
 :root{
   --primary-color: #0077b6;
+  --secondary-color: #000000;
+  --terceary-color: #373737;
+  --forthColor: #5f5f5f;
 }
 body {
   padding: 0;
@@ -20,14 +23,14 @@ a {
 h1, h2, h3{
   font-style: normal;
   font-weight: 300;
-  color: #000000;
+  color: var(--secondary-color);
   line-height: 33px;
   letter-spacing: 0.05em;
   margin: 0;
 }
 
 p{
-  color: #000000;
+  color: var(--secondary-color);
   font-size: 15px;
   line-height: 25px;
 }
@@ -121,8 +124,19 @@ footer a {
 
 /******Blog Post*******/
 .post{
-  padding: 10px;
-  color: #000000;
+  padding: 40px 15px 15px;
+  color: var(--secondary-color);
+}
+.post_btn-back{
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.post__title{
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 1.1em;
 }
 .post__content img{
  width: 100%;
@@ -173,16 +187,17 @@ footer a {
   letter-spacing: -0.04px;
   line-height: 1.3em;
 }
+.post__time,
 .card__time{
   font-size: 11px;
-  color: #5f5f5f;
+  color: var(--forthColor);
   letter-spacing: -0.04px;
   line-height: 1.3em;
 }
 .card__description{    
   font-size: 18px;
   margin: 15px 0;
-  color: #373737;
+  color: var(--terceary-color);
   font-weight: 100;
   letter-spacing: -0.04px;
   line-height: 1.3em;

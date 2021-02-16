@@ -8,10 +8,12 @@ import useFormatDate from '../../hooks/useFormatDate';
 
   return (
     <div className="content post">
-      <h1
-        className="post__title" 
-        dangerouslySetInnerHTML={{__html: title}} 
-      />
+
+      <a className="post_btn-back" href="/blog">
+        &#8592; Voltar na listagem
+      </a>
+
+      <h1 className="post__title"> { title } </h1>
 
       <time className="post__time">
         { formatedDate }
@@ -27,10 +29,10 @@ import useFormatDate from '../../hooks/useFormatDate';
 
 export const getServerSideProps = async (context) => {
 
-  const data = await useFetchApi(`blogs?slug=${context.query.slug}`);
-  
+  const res = await useFetchApi(`blogs?slug=${context.query.slug}`);
+
   return {
-    props: { blogPost: data[0] }
+    props: { blogPost: JSON.parse(JSON.stringify( res[0] )) }
   }
 
 }
