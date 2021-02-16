@@ -28,7 +28,7 @@ import Link from 'next/link';
         <section className='recent-posts'>
           <h3>Ultimas do blog</h3>
 
-          { Blogs.map( item => (
+          { Blogs.slice(0,2).map( item => (
               <BlogCard 
                 PostTitle={item.title}
                 PostDate={item.published_at}
