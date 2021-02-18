@@ -1,4 +1,4 @@
-import BlogCard from '../components/BlogCard';
+import Card from '../components/Card';
 import useFetchApi from '../hooks/useFetchApi';
 
 const AllPosts = ({Blogs}) => {
@@ -7,14 +7,14 @@ const AllPosts = ({Blogs}) => {
     <div className="main">
       <div className="content">
         { Blogs.map( item => (
-            <BlogCard 
-              PostTitle={item.title}
-              PostDate={item.published_at}
-              PostDecription={item.description}
-              key={item.id}
-              PostSlug={item.slug}
-              PostId={item.id}
-            />
+          <Card 
+            PostTitle={item.title}
+            PostDate={item.published_at}
+            PostDecription={item.description}
+            PostSlug={item.slug}
+            PostId={item.id}
+            PostFeaturedImg={item.featured_image}
+          />
         )) 
       }
       </div>

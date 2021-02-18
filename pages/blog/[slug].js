@@ -1,9 +1,11 @@
 import useFetchApi from '../../hooks/useFetchApi';
 import useFormatDate from '../../hooks/useFormatDate';
+import MyImage from '../../components/MyImage';
+import Image from 'next/image'
 
  const Blog = ({ blogPost }) => {
 
-  const { title, content, published_at } = blogPost;
+  const { title, content, published_at, featured_image } = blogPost;
   const { formatedDate } = useFormatDate(published_at);
 
   return (
@@ -18,7 +20,19 @@ import useFormatDate from '../../hooks/useFormatDate';
       <time className="post__time">
         { formatedDate }
       </time>
-
+      {
+        featured_image &&
+        (
+          <div className="post__featured-image">
+            <Image
+                className="image" 
+                src={`${featured_image.url}`} 
+                alt={featured_image.caption} 
+                layout="fill"
+            />
+          </div>
+        )
+      }
       <div 
         className="post__content"
         dangerouslySetInnerHTML={{__html: content}}

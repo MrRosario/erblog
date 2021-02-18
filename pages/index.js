@@ -1,4 +1,4 @@
-import BlogCard from '../components/BlogCard';
+import Card from '../components/Card';
 import useFetchApi from '../hooks/useFetchApi';
 import Link from 'next/link';
 
@@ -29,7 +29,7 @@ import Link from 'next/link';
           <h3>Ultimas do blog</h3>
 
           { Blogs.slice(0,2).map( item => (
-              <BlogCard 
+              <Card 
                 PostTitle={item.title}
                 PostDate={item.published_at}
                 PostDecription={item.description}

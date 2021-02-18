@@ -41,6 +41,11 @@ p{
   padding: 30px 15px;
 }
 
+img{
+  width: 100% !important;
+  height: auto !important;
+  position: relative !important;
+}
 
 /*****PAGINA HOME******/
 
@@ -124,23 +129,29 @@ footer a {
 
 /******Blog Post*******/
 .post{
-  padding: 40px 15px 15px;
+  padding: 20px 15px 15px;
   color: var(--secondary-color);
 }
 .post_btn-back{
   display: block;
-  color: var(--primary-color);
-  margin-bottom: 10px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
   font-size: 12px;
+  font-weight: 100;
 }
 .post__title{
   font-weight: bold;
   font-size: 35px;
   line-height: 1.1em;
 }
-.post__content img{
- width: 100%;
- height: auto;
+.post__content {
+  margin-top: 20px;
+}
+.post__featured-image{
+  margin-top: 5px;
+}
+.post__featured-image > div{
+  position:  relative !important;
 }
 .post__content pre {
   display: block;
@@ -148,7 +159,6 @@ footer a {
   margin: 0 0 28px;
   font-size: 13px;
   line-height: 1.6;
-  
   background-color: #f8f9fb;
   border: none;
   border-radius: 4px;
@@ -180,7 +190,7 @@ footer a {
 .card:hover{ 
   border: 1.5px solid var(--primary-color);
 }
-.card__title{
+.card__header{
   font-weight: bold;
   font-size: 28px;
   margin-bottom: 5px;
