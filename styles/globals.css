@@ -144,6 +144,12 @@ footer a {
   font-size: 35px;
   line-height: 1.1em;
 }
+#post-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
 .post__content {
   margin-top: 20px;
 }
@@ -172,6 +178,16 @@ footer a {
   color: #383a42;
 }
 
+/***Share****/
+.share__native {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #000;
+}
+.share__native svg{
+  margin-right: 5px;
+}
 /****Cards****/
 
 .card{

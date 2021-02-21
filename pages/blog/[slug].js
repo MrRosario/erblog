@@ -1,9 +1,18 @@
+import React from 'react';
 import useFetchApi from '../../hooks/useFetchApi';
 import useFormatDate from '../../hooks/useFormatDate';
-import MyImage from '../../components/MyImage';
+// import MyImage from '../../components/MyImage';
 import Image from 'next/image'
+import dynamic from "next/dynamic";
 
- const Blog = ({ blogPost }) => {
+const Share = dynamic(
+  () => {
+    return import("../../components/share");
+  },
+  { ssr: false }
+);
+
+const Blog = ({ blogPost }) => {
 
   const { title, content, published_at, featured_image } = blogPost;
   const { formatedDate } = useFormatDate(published_at);
@@ -17,18 +26,21 @@ import Image from 'next/image'
 
       <h1 className="post__title"> { title } </h1>
 
-      <time className="post__time">
-        { formatedDate }
-      </time>
+      <div id="post-details">
+        <time className="post__time">
+          { formatedDate }
+        </time>
+        <Share title={title} text={title} />
+      </div>
       {
         featured_image &&
         (
           <div className="post__featured-image">
             <Image
-                className="image" 
-                src={`${featured_image.url}`} 
-                alt={featured_image.caption} 
-                layout="fill"
+              className="image" 
+              src={`${featured_image.url}`} 
+              alt={featured_image.caption} 
+              layout="fill"
             />
           </div>
         )
