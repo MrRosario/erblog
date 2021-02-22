@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import useFormatDate from '../../hooks/useFormatDate';
-import MyImage from '../MyImage';
 
  const Card = ({
     PostTitle,
@@ -13,7 +12,6 @@ import MyImage from '../MyImage';
  }) => {
 
     const { formatedDate } = useFormatDate(PostDate);
-    console.log("PostFeaturedImg: ", PostFeaturedImg);
 
     return (
         <Link href={'/blog/' + PostSlug} as={'/blog/' + PostSlug}>

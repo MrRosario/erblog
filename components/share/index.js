@@ -1,27 +1,27 @@
-import React from 'react';
-
 const Share = ({ title, text }) => {
     
     const handleShare = () => {
         if (window.navigator.share) {
             window.navigator.share({
               title: title,
-              text: 'Eugenio Rosario || Web & Mobile',
+              text: text,
               url: window.location.href
             })
             .then(() => console.log('Successful share'))
             .catch((error) => console.log('Error sharing', error));
-          }
+        }
     }
 
     return(
         <div className="share">
            {window.navigator.share ? 
+                (
                 <div className="share__native" onClick={handleShare}>
                     <ShareIcon />
                     <span>Compartilhar</span>
                 </div>
-           : <span>Sem SUporte</span>
+                )
+           : <span>Sem Suporte</span>
            } 
         </div>
     )

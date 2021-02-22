@@ -1,7 +1,6 @@
 import React from 'react';
 import useFetchApi from '../../hooks/useFetchApi';
 import useFormatDate from '../../hooks/useFormatDate';
-// import MyImage from '../../components/MyImage';
 import Image from 'next/image'
 import dynamic from "next/dynamic";
 
