@@ -13,7 +13,7 @@ const Share = dynamic(
 
 const Blog = ({ blogPost }) => {
 
-  const { title, content, published_at, featured_image } = blogPost;
+  const { title, content, published_at, slug, featured_image } = blogPost;
   const { formatedDate } = useFormatDate(published_at);
 
   return (
@@ -29,7 +29,7 @@ const Blog = ({ blogPost }) => {
         <time className="post__time">
           { formatedDate }
         </time>
-        <Share title={title} text={title} />
+        <Share title={title} text={title} slug={slug} />
       </div>
       {
         featured_image &&

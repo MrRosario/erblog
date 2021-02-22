@@ -148,7 +148,7 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 20px 0px 30px;
 }
 .post__content {
   margin-top: 20px;
@@ -179,6 +179,7 @@ footer a {
 }
 
 /***Share****/
+.share_social-media,
 .share__native {
   display: flex;
   align-items: center;
@@ -187,6 +188,9 @@ footer a {
 }
 .share__native svg{
   margin-right: 5px;
+}
+.share_social-media svg{
+  margin-left: 10px;
 }
 /****Cards****/
 
