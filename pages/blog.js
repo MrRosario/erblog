@@ -8,6 +8,7 @@ const AllPosts = ({Blogs}) => {
       <div className="content">
         { Blogs.map( item => (
           <Card 
+            key={item.id}
             PostTitle={item.title}
             PostDate={item.published_at}
             PostDecription={item.description}

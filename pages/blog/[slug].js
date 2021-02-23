@@ -56,8 +56,10 @@ export const getServerSideProps = async (context) => {
 
   const res = await useFetchApi(`blogs?slug=${context.query.slug}`);
 
+  console.log("RES: ", res.length);
+
   return {
-    props: { blogPost: JSON.parse(JSON.stringify( res[0] )) }
+    props: { blogPost:  res[0] || "" }
   }
 
 }
