@@ -5,7 +5,7 @@ require('dotenv').config();
 module.exports = {
   images: {
     loader: 'imgix',
-    path: process.env.API_URL
+    path: 'https://strapifileupload.s3.sa-east-1.amazonaws.com/'
   },
   env: {
     API_URL: process.env.API_URL

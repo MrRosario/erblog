@@ -37,7 +37,7 @@ const Blog = ({ blogPost }) => {
           <div className="post__featured-image">
             <Image
               className="image" 
-              src={`${featured_image.url}`} 
+              src={`${featured_image.hash}${featured_image.ext}`} 
               alt={featured_image.caption} 
               layout="fill"
             />
@@ -55,8 +55,6 @@ const Blog = ({ blogPost }) => {
 export const getServerSideProps = async (context) => {
 
   const res = await useFetchApi(`blogs?slug=${context.query.slug}`);
-
-  console.log("RES: ", res.length);
 
   return {
     props: { blogPost:  res[0] || "" }

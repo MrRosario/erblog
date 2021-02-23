@@ -36,6 +36,7 @@ import Link from 'next/link';
                 key={item.id}
                 PostSlug={item.slug}
                 PostId={item.id}
+                PostFeaturedImg={item.featured_image}
               />
             )
           )}

@@ -30,7 +30,7 @@ import useFormatDate from '../../hooks/useFormatDate';
                     <div className="post__featured-image">
                         <Image
                             className="image" 
-                            src={`${PostFeaturedImg.url}`} 
+                            src={`${PostFeaturedImg.hash}${PostFeaturedImg.ext}`} 
                             alt={PostFeaturedImg.caption} 
                             layout="fill"
                         />
