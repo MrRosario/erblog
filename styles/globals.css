@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 :root{
   --primary-color: #0077b6;
@@ -9,7 +9,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   background-color: #ffffff;
 }
 a {
@@ -38,7 +38,7 @@ p{
   margin-top: 60px;
 }
 .main {
-  padding: 30px 15px;
+  padding: 50px 15px;
 }
 
 img{
@@ -66,9 +66,9 @@ img{
 /****HEADER****/
 
 .header{
-  height: 60px;
+  height: 68px;
   width: 100%;
-  background: #171717;
+  background: #313131;
   position: fixed;
   top: 0;
   left: 0;
@@ -96,7 +96,7 @@ img{
   font-size: 20px;
 }
 .header__logo {
-  height: 60px
+  height: 68px
 }
 .header__logo img{
   height: 100%;
@@ -137,7 +137,7 @@ footer a {
   color: var(--secondary-color);
   margin-bottom: 15px;
   font-size: 12px;
-  font-weight: 100;
+  font-weight: 400;
 }
 .post__title{
   font-weight: bold;
@@ -158,6 +158,22 @@ footer a {
 }
 .post__featured-image > div{
   position:  relative !important;
+}
+.post__content p{
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+.post__content h2{
+  font-weight: 600;
+  font-size: 25px;
+}
+.post__content a{
+  display: block;
+  text-decoration: underline;
+  color: var(--primary-color);
+  padding: 20px 0px;
 }
 .post__content pre {
   display: block;
@@ -223,12 +239,13 @@ footer a {
   color: var(--forthColor);
   letter-spacing: -0.04px;
   line-height: 1.3em;
+  font-weight: 600;
 }
 .card__description{    
   font-size: 18px;
   margin: 15px 0;
   color: var(--terceary-color);
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: -0.04px;
   line-height: 1.3em;
 }
