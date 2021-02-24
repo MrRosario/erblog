@@ -12,12 +12,12 @@ import Link from 'next/link';
            <span> &copy; 2021 eugeniorosario.com </span>
            <Link href="/policies">
                <a target="_blank" rel="noreferrer"> 
-                    &#9679; Política de Privacidade 
+                    <span>&#9679;</span> Política de Privacidade 
                 </a>
             </Link>
             <Link href="/terms">
                <a target="_blank" rel="noreferrer"> 
-                    &#9679; Termos de Uso 
+                    <span>&#9679;</span> Termos de Uso 
                 </a>
             </Link>
         </p>
