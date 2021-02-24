@@ -10,7 +10,7 @@ import Link from 'next/link';
           <h1>Ola</h1>
           <p>
             Meu nome é Eugénio, apaixonado por desenvolvimento de software,  
-            energia renovável, e tudo relacionado a tecnologia.
+            sustentabilidade, e tudo relacionado a tecnologia.
             Acredito que posso melhorar o mundo desenvolvendo coisas.
           </p>
           <p> 
@@ -21,7 +21,7 @@ import Link from 'next/link';
               target="_blank"
               className="btn btn-view-more"
             >
-               canal no youtube com conteúdos sobre programação.
+              canal no youtube com conteúdos sobre programação.
             </a>
           </p>
         </article>

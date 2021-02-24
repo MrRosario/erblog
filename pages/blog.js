@@ -6,6 +6,9 @@ const AllPosts = ({Blogs}) => {
   return (
     <div className="main">
       <div className="content">
+        
+        <h1 className="content__title"> Blog </h1>
+
         { Blogs.map( item => (
           <Card 
             key={item.id}
