@@ -49,20 +49,34 @@ img{
 
 /*****PAGINA HOME******/
 
+.introduction h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.introduction p {
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+}
 .introduction .btn-view-more{ 
   margin-left: 5px;
 }
 .btn-view-more{
   font-weight: 500;
-  font-size: 14px;
+  font-size: inherit;
   line-height: 16px;
   letter-spacing: 0.05em;
   color: var(--primary-color);
-  margin-bottom: 10px;
 }
 .recent-posts{
   padding-bottom: 20px;
 }
+.recent-posts h3 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
 /****HEADER****/
 
 .header{
@@ -213,7 +227,7 @@ footer a {
 .card{
   display: block;
   width: 100%;
-  max-height: 330px;
+  /* max-height: 330px; */
   position: relative;
   font-weight: 300;
   padding: 10px;
@@ -222,6 +236,12 @@ footer a {
   border-radius: 2px;
   border: 0.5px solid rgb(0 0 0 / 15%);
   box-shadow: 0px 7px 7px -3px rgb(0 0 0 / 50%);
+}
+.card img {
+  max-height: 150px !important;
+  min-height: 150px !important;
+  object-fit: cover;
+  margin: 15px 0px 0px !important;
 }
 .card:hover{ 
   border: 1.5px solid var(--primary-color);
@@ -235,17 +255,17 @@ footer a {
 }
 .post__time,
 .card__time{
-  font-size: 11px;
+  font-size: 12px;
   color: var(--forthColor);
   letter-spacing: -0.04px;
   line-height: 1.3em;
-  font-weight: 600;
+  font-weight: 400;
 }
 .card__description{    
   font-size: 18px;
   margin: 15px 0;
   color: var(--terceary-color);
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: -0.04px;
   line-height: 1.3em;
 }

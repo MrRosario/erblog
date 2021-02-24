@@ -37,10 +37,10 @@ import useFormatDate from '../../hooks/useFormatDate';
                     </div>
                 }
                 
-                <h3 className="card__description">
+                <h2 className="card__description">
                     { PostDecription }
-                </h3>
-                <div className="card__tags"> </div>
+                </h2>
+                {/* <div className="card__tags"> </div> */}
             </a>
         </Link>
     )
