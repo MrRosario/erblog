@@ -25,7 +25,7 @@ import Link from 'next/link';
                     Política de Privacidade 
                 </a>
             </Link>
-            <Link href="/terms">
+            <Link href="https://github.com/MrRosario/erblog/blob/master/LICENSE">
                <a target="_blank" rel="noreferrer"> 
                     <span style={spanStyle}>
                         &#9679;
