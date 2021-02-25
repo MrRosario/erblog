@@ -1,26 +1,34 @@
 import useFetchApi from '../hooks/useFetchApi';
 import LabCard from '../components/LabCard';
+import Seo from '../components/Seo';
 
 const Lab = ({ Lab }) => {
   
   return (
-    <div className="main">
-      <div className="content lab">
-        
-        <h1 className="content__title"> Portfólio </h1>
+    <>
+      <Seo 
+        title='Portfólio | Eugenio Rosario - Software developer'
+        description='Blog e Site pessoal de um desenvolvedor software apaixonado por desenvolver sistemas, e onde compartilha seus conhecimentos sobre programação.'
+        currentPage='https://eugeniorosario.com/lab'
+      />
+      <div className="main">
+        <div className="content lab">
+          
+          <h1 className="content__title"> Portfólio </h1>
 
-        { Lab.map(item => (
-          <LabCard 
-            title={item.title}
-            featuredImg={item.featured_img}
-            description={item.description}
-            url={item.url}
-            key={item.id}
-          />
-          ))
-        }
+          { Lab.map(item => (
+            <LabCard 
+              title={item.title}
+              featuredImg={item.featured_img}
+              description={item.description}
+              url={item.url}
+              key={item.id}
+            />
+            ))
+          }
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

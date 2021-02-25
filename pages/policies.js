@@ -4,7 +4,7 @@ const Policies = () => {
     return(
         <>
             <Seo 
-                title='Política de privacidade || Eugenio Rosario'
+                title='Política de privacidade | Eugenio Rosario - Software developer'
                 description='Blog e Site pessoal de um desenvolvedor software apaixonado por desenvolver sistemas, e onde compartilha seus conhecimentos sobre programação.'
                 currentPage='https://eugeniorosario.com/policies'
             />

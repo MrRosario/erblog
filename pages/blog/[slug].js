@@ -13,42 +13,49 @@ const Share = dynamic(
 
 const Blog = ({ blogPost }) => {
 
-  const { title, content, published_at, slug, featured_image } = blogPost;
+  const { title, content, published_at, slug, featured_image, description } = blogPost;
   const { formatedDate } = useFormatDate(published_at);
 
   return (
-    <div className="content post">
-
-      <a className="post_btn-back" href="/blog">
-        &#8592; Voltar na listagem
-      </a>
-
-      <h1 className="post__title"> { title } </h1>
-
-      <div id="post-details">
-        <time className="post__time">
-          { formatedDate }
-        </time>
-        <Share title={title} text={title} slug={slug} />
-      </div>
-      {
-        featured_image &&
-        (
-          <div className="post__featured-image">
-            <Image
-              className="image" 
-              src={`${featured_image.hash}${featured_image.ext}`} 
-              alt={featured_image.caption} 
-              layout="fill"
-            />
-          </div>
-        )
-      }
-      <div 
-        className="post__content"
-        dangerouslySetInnerHTML={{__html: content}}
+    <>
+      <Seo 
+        title={`${title} | Eugenio Rosario - Software developer`}
+        description={description}
+        currentPage={`https://eugeniorosario.com/blog/${slug}`}
       />
-    </div>
+      <div className="content post">
+
+        <a className="post_btn-back" href="/blog">
+          &#8592; Voltar na listagem
+        </a>
+
+        <h1 className="post__title"> { title } </h1>
+
+        <div id="post-details">
+          <time className="post__time">
+            { formatedDate }
+          </time>
+          <Share title={title} text={title} slug={slug} />
+        </div>
+        {
+          featured_image &&
+          (
+            <div className="post__featured-image">
+              <Image
+                className="image" 
+                src={`${featured_image.hash}${featured_image.ext}`} 
+                alt={featured_image.caption} 
+                layout="fill"
+              />
+            </div>
+          )
+        }
+        <div 
+          className="post__content"
+          dangerouslySetInnerHTML={{__html: content}}
+        />
+      </div>
+    </>
   )
 }
 

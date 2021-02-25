@@ -7,7 +7,7 @@ import Seo from '../components/Seo';
   return (
     <>
       <Seo 
-        title='Página Inicial || Eugenio Rosario'
+        title='Página Inicial | Eugenio Rosario - Software developer'
         description='Blog e Site pessoal de um desenvolvedor software apaixonado por desenvolver sistemas, e onde compartilha seus conhecimentos sobre programação.'
         currentPage='https://eugeniorosario.com'
       />
