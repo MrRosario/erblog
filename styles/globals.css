@@ -294,8 +294,16 @@ footer a {
   width: 100%;
   position: relative;
 }
-.lab-card .post__featured-image{
+.lab-card .post__featured-image {
   margin-top: unset;
+  height: 250px;
+  background: #333740;
+}
+.lab-card .post__featured-image > div {
+  height: 100%;
+}
+.lab-card .post__featured-image > div img {
+  object-fit: contain;
 }
 .lab-card__information {
   padding: 10px;
