@@ -87,7 +87,7 @@ img{
 /****HEADER****/
 
 .header{
-  height: 50px;
+  height: 60px;
   width: 100%;
   /* background: #313131; */
   background: #000;
@@ -118,7 +118,7 @@ img{
   font-size: 20px;
 }
 .header__logo {
-  height: 50px;
+  height: 60px;
   position: relative;
   left: -1px;
 }

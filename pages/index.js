@@ -7,7 +7,7 @@ import Link from 'next/link';
     <div className="main">
       <div className="content">
         <article className="introduction">
-          <h1>Ola</h1>
+          <h1>Olá</h1>
           <p>
             Meu nome é Eugénio, apaixonado por desenvolvimento de software,  
             sustentabilidade, e tudo relacionado a tecnologia.
