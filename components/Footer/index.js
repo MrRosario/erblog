@@ -18,7 +18,7 @@ import Link from 'next/link';
        <p>
            <span> &copy; 2021 eugeniorosario.com </span>
            <Link href="/policies">
-               <a target="_blank" rel="noreferrer"> 
+               <a> 
                     <span style={spanStyle}>
                         &#9679;
                     </span> 

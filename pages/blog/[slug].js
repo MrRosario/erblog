@@ -3,6 +3,7 @@ import useFetchApi from '../../hooks/useFetchApi';
 import useFormatDate from '../../hooks/useFormatDate';
 import Image from 'next/image'
 import dynamic from "next/dynamic";
+import Seo from '../../components/Seo';
 
 const Share = dynamic(
   () => {
@@ -23,6 +24,7 @@ const Blog = ({ blogPost }) => {
         description={description}
         currentPage={`https://eugeniorosario.com/blog/${slug}`}
       />
+      
       <div className="content post">
 
         <a className="post_btn-back" href="/blog">
