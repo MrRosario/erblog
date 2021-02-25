@@ -141,7 +141,7 @@ footer a:hover{
 }
 
 /******Page not found******/
-.notFound{
+.not-found {
   height: 80vh;
   padding: 0px 10px;
   display: flex;
@@ -149,11 +149,11 @@ footer a:hover{
   align-items: center;
   text-align: center;
 }
-.notFound h2{
+.not-found h2 {
   font-weight: unset;
   font-size: 18px;
 }
-.notFound h2 a{
+.not-found h2 a {
   text-decoration: underline;
   color: var(--primary-color);
 }
