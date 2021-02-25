@@ -38,7 +38,7 @@ p{
   margin-top: 60px;
 }
 .content__title{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 40px;
   font-weight: bold;
 }
@@ -281,4 +281,31 @@ footer a {
   margin-bottom: 10px;
   position: absolute;
   bottom: 0;
+}
+
+/****LabCard*****/
+.lab-card {
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid rgb(0 0 0 / 50%);
+  box-shadow: 0px 7px 7px -3px rgb(0 0 0 / 50%);
+  width: 100%;
+  position: relative;
+}
+.lab-card .post__featured-image{
+  margin-top: unset;
+}
+.lab-card__information {
+  padding: 10px;
+}
+.lab-card__title {
+  font-size: 26px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.lab-card__description{
+  font-size: 18px;
+  font-weight: 300;
 }

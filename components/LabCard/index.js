@@ -5,13 +5,12 @@ const LabCard = ({
     title, 
     description, 
     featuredImg, 
-    url, 
-    index
+    url
 }) => {
 
     return(
       <Link href={url}>
-        <a className="lab-card" target="_blank" key={index}> 
+        <a className="lab-card" target="_blank"> 
           <div className="lab-card__img post__featured-image">
             <Image
               className="image" 
@@ -20,12 +19,14 @@ const LabCard = ({
               layout="fill"
             />
           </div>
-          <h2 className="lab-card__title">
-            {title}
-          </h2>
-          <p className="lab-card__description">
-            {description}
-          </p>
+          <div className="lab-card__information">
+            <h2 className="lab-card__title">
+                {title}
+            </h2>
+            <p className="lab-card__description">
+                {description}
+            </p>
+          </div>
         </a>
       </Link>
     )

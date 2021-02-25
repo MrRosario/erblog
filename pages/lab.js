@@ -2,7 +2,7 @@ import useFetchApi from '../hooks/useFetchApi';
 import LabCard from '../components/LabCard';
 
 const Lab = ({ Lab }) => {
-  console.log("Lab: ", Lab)
+  
   return (
     <div className="main">
       <div className="content lab">
@@ -15,7 +15,7 @@ const Lab = ({ Lab }) => {
             featuredImg={item.featured_img}
             description={item.description}
             url={item.url}
-            index={item.id}
+            key={item.id}
           />
           ))
         }
