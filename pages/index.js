@@ -26,7 +26,7 @@ import Link from 'next/link';
           </p>
         </article>
         <section className='recent-posts'>
-          <h3>Ultimas do blog</h3>
+          <h3>Publicações recentes</h3>
 
           { Blogs.slice(0,2).map( item => (
               <Card 

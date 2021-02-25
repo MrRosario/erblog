@@ -29,7 +29,7 @@ import Link from 'next/link';
     <nav className="header">
         <Link href="/">
             <a className="header__logo">
-                <img src="/logo.svg" alt="logo" />
+                <img src="/logo6.svg" alt="logo" />
             </a>
         </Link>
 

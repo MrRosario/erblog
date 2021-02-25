@@ -1,6 +1,13 @@
 import Link from 'next/link';
 
  const Footer = () => {
+
+    const spanStyle = {
+        color: "transparent",
+        textShadow: "0 0 0 #5f5f5f",
+        fontWeight: "100"
+    };
+
   return (
     <footer>
         <div className="social-media">
@@ -12,12 +19,18 @@ import Link from 'next/link';
            <span> &copy; 2021 eugeniorosario.com </span>
            <Link href="/policies">
                <a target="_blank" rel="noreferrer"> 
-                    <span>&#9679;</span> Política de Privacidade 
+                    <span style={spanStyle}>
+                        &#9679;
+                    </span> 
+                    Política de Privacidade 
                 </a>
             </Link>
             <Link href="/terms">
                <a target="_blank" rel="noreferrer"> 
-                    <span>&#9679;</span> Termos de Uso 
+                    <span style={spanStyle}>
+                        &#9679;
+                    </span> 
+                    Termos de Uso 
                 </a>
             </Link>
         </p>

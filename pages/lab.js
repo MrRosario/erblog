@@ -7,7 +7,7 @@ const Lab = ({ Lab }) => {
     <div className="main">
       <div className="content lab">
         
-        <h1 className="content__title"> Lab </h1>
+        <h1 className="content__title"> Portfólio </h1>
 
         { Lab.map(item => (
           <LabCard 
