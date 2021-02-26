@@ -28,7 +28,7 @@ const AllPosts = ({Blogs}) => {
 
 export async function getStaticProps () {
   
-  const data = await useFetchApi('blogs')
+  const data = await useFetchApi('blogs?_sort=createdAt:DESC')
 
   return {
     props: {

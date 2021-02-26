@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Seo from '../components/Seo';
 
  const Home = ({ Blogs }) => {
+   
   return (
     <>
       <Seo 
@@ -35,7 +36,7 @@ import Seo from '../components/Seo';
           <section className='recent-posts'>
             <h3>Publicações recentes</h3>
 
-            { Blogs.slice(0,2).map( item => (
+            { Blogs.map( item => (
                 <Card 
                   PostTitle={item.title}
                   PostDate={item.published_at}
@@ -62,7 +63,7 @@ import Seo from '../components/Seo';
 
 export async function getStaticProps () {
   
-  const data = await useFetchApi('blogs')
+  const data = await useFetchApi('blogs?_sort=createdAt:DESC&_limit=2')
 
   return {
     props: {

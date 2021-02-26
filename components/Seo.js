@@ -7,7 +7,7 @@ const Seo = ({ title, description, currentPage }) => (
     <meta charSet="UTF-8" />
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
     <meta httpEquiv="Cache-Control" content="public,max-age=1800,max-stale,stale-while-revalidate=86400,stale-if-error=259200" rem="max-age=30minutes" />
-    <meta name="theme-color" content="#0077b6" />
+    <meta name="theme-color" content="#000000" />
     <meta name="robots" content="index, follow" />
     <meta name="description" content={description} />
     <meta property="og:type" content="website" />
@@ -29,7 +29,7 @@ const Seo = ({ title, description, currentPage }) => (
     <link rel="apple-touch-startup-image" href="/eugeniorosario_ico.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="msapplication-navbutton-color" content="#0077b6" /> 
+    <meta name="msapplication-navbutton-color" content="#000000" /> 
     <link rel="canonical" href={currentPage} />
   </Head>
 

@@ -3,7 +3,7 @@ import LabCard from '../components/LabCard';
 import Seo from '../components/Seo';
 
 const Lab = ({ Lab }) => {
-  
+
   return (
     <>
       <Seo 
@@ -34,8 +34,8 @@ const Lab = ({ Lab }) => {
 
 export async function getStaticProps () {
   
-  const data = await useFetchApi('labs')
-
+  const data = await useFetchApi('labs?_sort=createdAt:DESC')
+  
   return {
     props: {
       Lab: data
