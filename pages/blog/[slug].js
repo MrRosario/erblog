@@ -37,7 +37,7 @@ const Blog = ({ blogPost }) => {
           <time className="post__time">
             { formatedDate }
           </time>
-          <Share title={title} text={title} slug={slug} />
+          <Share title={title} text={title} />
         </div>
         {
           featured_image &&

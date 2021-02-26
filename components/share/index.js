@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Share = ({ title, text, slug }) => {
+const Share = ({ title, text }) => {
     const currentUrl = window.location.href;
 
     const handleShare = () => {
