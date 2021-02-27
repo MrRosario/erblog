@@ -10,9 +10,13 @@ module.exports = {
   env: {
     API_URL: process.env.API_URL
   },
-  webpack: config => {
+  webpack: (config, { isServer }) => {
       config.resolve.alias['components'] = path.join(__dirname, 'components')
       config.resolve.alias['public'] = path.join(__dirname, 'public')
+      
+      if (isServer) {
+        require('./utils/generateSiteMap')
+      }
 
       return config
   },
