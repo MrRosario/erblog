@@ -27,6 +27,7 @@ const Seo = ({ title, description, currentPage }) => (
     <link rel="icon" href="/eugeniorosario_ico.png"/>
     <link rel="apple-touch-icon" href="/eugeniorosario_ico.png" />
     <link rel="apple-touch-startup-image" href="/eugeniorosario_ico.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="msapplication-navbutton-color" content="#000000" /> 
